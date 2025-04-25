@@ -10,7 +10,8 @@ export default function RegistrationPage() {
     eventType: "",
     experienceLevel: "",
     equipmentRental: "no",
-    specialRequests: ""
+    specialRequests: "",
+    bikeType: ""
   });
 
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
@@ -82,7 +83,7 @@ export default function RegistrationPage() {
                   <span>Event certificate</span>
                 </li>
               </ul>
-              
+
               <div className="mt-12 pt-8 border-t border-green-500">
                 <h4 className="font-bold mb-4">Need Help?</h4>
                 <p className="mb-4">Our team is ready to assist with your registration.</p>
@@ -100,10 +101,10 @@ export default function RegistrationPage() {
                 </div>
               </div>
             </div>
-            
+
             <div className="md:w-2/3 p-8">
               <h3 className="text-2xl font-bold mb-6 text-gray-800">Registration Details</h3>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
@@ -118,7 +119,7 @@ export default function RegistrationPage() {
                     className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                   />
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
@@ -147,7 +148,7 @@ export default function RegistrationPage() {
                     />
                   </div>
                 </div>
-                
+
                 <div>
                   <label htmlFor="eventType" className="block text-sm font-medium text-gray-700 mb-1">Select Event</label>
                   <select
@@ -167,7 +168,7 @@ export default function RegistrationPage() {
                     <option value="exhibition">Pro Exhibition - October 5, 2025</option>
                   </select>
                 </div>
-                
+
                 <div>
                   <label htmlFor="experienceLevel" className="block text-sm font-medium text-gray-700 mb-1">Experience Level</label>
                   <select
@@ -185,37 +186,22 @@ export default function RegistrationPage() {
                     <option value="expert">Expert (5+ years)</option>
                   </select>
                 </div>
-                
                 <div>
-                  <p className="block text-sm font-medium text-gray-700 mb-1">Equipment Rental</p>
-                  <div className="flex items-center space-x-6">
-                    <div className="flex items-center">
-                      <input
-                        id="rentalYes"
-                        name="equipmentRental"
-                        type="radio"
-                        value="yes"
-                        checked={formData.equipmentRental === "yes"}
-                        onChange={handleChange}
-                        className="h-4 w-4 text-green-600 focus:ring-green-500"
-                      />
-                      <label htmlFor="rentalYes" className="ml-2 text-gray-700">Yes, I need equipment</label>
-                    </div>
-                    <div className="flex items-center">
-                      <input
-                        id="rentalNo"
-                        name="equipmentRental"
-                        type="radio"
-                        value="no"
-                        checked={formData.equipmentRental === "no"}
-                        onChange={handleChange}
-                        className="h-4 w-4 text-green-600 focus:ring-green-500"
-                      />
-                      <label htmlFor="rentalNo" className="ml-2 text-gray-700">No, I have my own</label>
-                    </div>
-                  </div>
+                  <label htmlFor="bikeType" className="block text-sm font-medium text-gray-700 mb-1">Type of Bike</label>
+                  <input
+                    id="bikeType"
+                    name="bikeType"
+                    type="text"
+                    value={formData.bikeType}
+                    onChange={handleChange}
+                    placeholder="e.g., Yamaha Raptor 700"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                  />
                 </div>
-                
+
+
+
+
                 <div>
                   <label htmlFor="specialRequests" className="block text-sm font-medium text-gray-700 mb-1">Special Requests or Questions</label>
                   <textarea
@@ -223,12 +209,12 @@ export default function RegistrationPage() {
                     name="specialRequests"
                     value={formData.specialRequests}
                     onChange={handleChange}
-                   
+
                     placeholder="Let us know if you have any special requests or questions..."
                     className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                   ></textarea>
                 </div>
-                
+
                 <div className="pt-4">
                   <button
                     type="submit"
@@ -246,7 +232,7 @@ export default function RegistrationPage() {
         </div>
       </section>
 
-   
+
     </main>
   );
 }
