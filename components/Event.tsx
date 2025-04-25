@@ -54,12 +54,10 @@ const EventsSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-end mb-12">
           <div>
-            <span className="inline-block px-4 py-1 bg-green-500 bg-opacity-20 text-green-400 font-medium text-sm rounded-full mb-4">MARK YOUR CALENDAR</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">Upcoming Events</h2>
+           
+            <h2 className="text-3xl md:text-4xl font-bold text-white">Events</h2>
             <div className="w-24 h-1 bg-green-500 mt-4 mb-4"></div>
-            <p className="text-gray-300 max-w-2xl">
-              Join us for these exciting motocross events designed for all skill levels and interests.
-            </p>
+            
           </div>
 
           <a href="/events" className="hidden md:flex items-center text-green-400 hover:text-green-300 transition duration-300">
