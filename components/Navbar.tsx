@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo and Brand Name */}
         <div className="flex items-center space-x-3">
-          <div className="h-20 w-20 bg-green-600 rounded-md flex items-center justify-center">
+          <div className="h-16 w-16 bg-green-600 rounded-md flex items-center justify-center">
            <img src="/logo.jpeg" alt="" />
           </div>
           <h1 className="md:text-xl md:flex hidden text-sm font-bold text-green-600">TRANSPORTER <span className="text-black">BIKERS</span> <span className="text-gray-600">CLUB</span></h1>
