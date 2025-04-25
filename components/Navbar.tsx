@@ -28,12 +28,7 @@ const Navbar = () => {
           <Link href="/registration" className="text-gray-600 hover:text-gray-900 transition duration-300">Registration</Link>
         </div>
 
-        {/* Contact Button */}
-        <div className="hidden md:flex items-center">
-          <button className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 transition duration-300 shadow-sm">
-            Contact Us
-          </button>
-        </div>
+       
 
         {/* Mobile Hamburger Button */}
         <div className="md:hidden flex items-center">
@@ -62,9 +57,7 @@ const Navbar = () => {
             <Link href="/events" className="text-green-600 font-medium border-l-4 border-green-600 bg-green-50 px-3 py-2 rounded-md">Events</Link>
             <Link href="/partners" className="text-gray-600 hover:text-gray-900 transition duration-300 px-3 py-2 rounded-md hover:bg-gray-100">Partners</Link>
             <Link href="/registration" className="text-gray-600 hover:text-gray-900 transition duration-300 px-3 py-2 rounded-md hover:bg-gray-100">Registration</Link>
-            <button className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition duration-300 shadow-sm flex items-center justify-center">
-              Contact Us
-            </button>
+           
           </div>
         </div>
       )}

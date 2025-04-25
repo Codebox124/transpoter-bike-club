@@ -18,10 +18,10 @@ export default function Home() {
   return (
     <main className="relative">
       <Hero />
-      <AboutSection />
+      {/* <AboutSection />
       <FeaturesGrid />
       <CommunitySection />
-      <Gallery />
+      <Gallery /> */}
       {/* Events preview section */}
       <EventsSection />
     </main>
