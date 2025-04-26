@@ -43,66 +43,9 @@ export default function RegistrationPage() {
       <section className="py-16 px-6 bg-gray-50 flex-grow">
         <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="md:flex">
-            <div className="md:w-1/3 bg-green-600 p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6">Event Benefits</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <svg className="h-6 w-6 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span>Professional track access</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-6 w-6 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span>Safety equipment available</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-6 w-6 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span>Expert coaching</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-6 w-6 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span>Refreshments included</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-6 w-6 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span>Official event photos</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-6 w-6 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                  </svg>
-                  <span>Event certificate</span>
-                </li>
-              </ul>
+          
 
-              <div className="mt-12 pt-8 border-t border-green-500">
-                <h4 className="font-bold mb-4">Need Help?</h4>
-                <p className="mb-4">Our team is ready to assist with your registration.</p>
-                <div className="flex items-center">
-                  <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                  </svg>
-                  <span>support@atvmoto.com</span>
-                </div>
-                <div className="flex items-center mt-2">
-                  <svg className="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                  </svg>
-                  <span>(555) 123-4567</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="md:w-2/3 p-8">
+            <div className="w-full p-8">
               <h3 className="text-2xl font-bold mb-6 text-gray-800">Registration Details</h3>
 
               <form onSubmit={handleSubmit} className="space-y-6">
