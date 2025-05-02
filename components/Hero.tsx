@@ -4,7 +4,7 @@ const Hero = () => {
       <section className="relative h-[90vh] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('/hero.jpg')" }}>
         <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">TRANSPORTER BIKER CLUB</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">TRANSPORTER BIKERS CLUB</h1>
           {/* <p className="max-w-xl mx-auto mb-6">
             Join us at ATV & Motorcycle and be part of a thriving community that celebrates motocross, adrenaline, and adventure!
           </p> */}
