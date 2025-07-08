@@ -1,7 +1,9 @@
 "use client";
 import Link from "next/link";
+import useTranslations from '@/hooks/useTranslations';
 
 export default function PartnersPage() {
+  const t = useTranslations();
   const partner = {
     id: 1,
     name: "SpeedTech Racing",
@@ -13,9 +15,9 @@ export default function PartnersPage() {
       {/* Hero Section */}
       <section className="bg-gray-900 text-white py-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Partner</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">{t.partnersPage.hero.title}</h1>
           <p className="text-gray-300 text-lg mb-6">
-            We are proud to collaborate with brands and organizations that share our passion for motorsports.
+            {t.partnersPage.hero.subtitle}
           </p>
         </div>
       </section>

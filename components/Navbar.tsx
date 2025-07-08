@@ -1,9 +1,11 @@
 'use client'
 import { useState } from 'react';
 import Link from 'next/link';
+import useTranslations from '@/hooks/useTranslations';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const t = useTranslations();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -17,15 +19,15 @@ const Navbar = () => {
           <div className="h-16 w-16 bg-green-600 rounded-md flex items-center justify-center">
            <img src="/logo.jpeg" alt="" />
           </div>
-          <h1 className="md:text-xl md:flex hidden text-sm font-bold text-green-600">TRANSPORTER <span className="text-black">BIKERS</span> <span className="text-gray-600">CLUB</span></h1>
+          <h1 className="md:text-xl md:flex hidden text-sm font-bold text-green-600">TR <span className="text-black">ANSPORTERBIKERS</span> <span className="text-gray-600">CLUB</span></h1>
         </div>
 
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex space-x-8">
-          <Link href="/" className="text-gray-600 hover:text-gray-900 transition duration-300">Home</Link>
-          <Link href="/events" className="text-gray-600 hover:text-gray-900 transition duration-300 ">Events</Link>
-          <Link href="/partners" className="text-gray-600 hover:text-gray-900 transition duration-300">Partners</Link>
-          <Link href="/registration" className="text-gray-600 hover:text-gray-900 transition duration-300">Registration</Link>
+          <Link href="/" className="text-gray-600 hover:text-gray-900 transition duration-300">{t.nav.home}</Link>
+          <Link href="/events" className="text-gray-600 hover:text-gray-900 transition duration-300 ">{t.nav.events}</Link>
+          <Link href="/partners" className="text-gray-600 hover:text-gray-900 transition duration-300">{t.nav.partners}</Link>
+          <Link href="/registration" className="text-gray-600 hover:text-gray-900 transition duration-300">{t.nav.registration}</Link>
         </div>
 
        
@@ -53,10 +55,10 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden mt-4 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-4 absolute left-4 right-4">
           <div className="flex flex-col space-y-4">
-            <Link href="/" className="text-gray-600 hover:text-gray-900 transition duration-300 px-3 py-2 rounded-md hover:bg-gray-100">Home</Link>
-            <Link href="/events" className="text-green-600 font-medium border-l-4 border-green-600 bg-green-50 px-3 py-2 rounded-md">Events</Link>
-            <Link href="/partners" className="text-gray-600 hover:text-gray-900 transition duration-300 px-3 py-2 rounded-md hover:bg-gray-100">Partners</Link>
-            <Link href="/registration" className="text-gray-600 hover:text-gray-900 transition duration-300 px-3 py-2 rounded-md hover:bg-gray-100">Registration</Link>
+            <Link href="/" className="text-gray-600 hover:text-gray-900 transition duration-300 px-3 py-2 rounded-md hover:bg-gray-100">{t.nav.home}</Link>
+            <Link href="/events" className="text-green-600 font-medium border-l-4 border-green-600 bg-green-50 px-3 py-2 rounded-md">{t.nav.events}</Link>
+            <Link href="/partners" className="text-gray-600 hover:text-gray-900 transition duration-300 px-3 py-2 rounded-md hover:bg-gray-100">{t.nav.partners}</Link>
+            <Link href="/registration" className="text-gray-600 hover:text-gray-900 transition duration-300 px-3 py-2 rounded-md hover:bg-gray-100">{t.nav.registration}</Link>
            
           </div>
         </div>

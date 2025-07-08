@@ -1,80 +1,85 @@
 'use client'
 import Link from "next/link";
-
-const events = [
-  {
-    title: "2024 Moto Drag Stage II",
-    date: "October 20 , 11:00 AM",
-    url:"https://motofederation.ge/ka/event/2024-moto-drag-racing-stage-ii",
-    location: "Rustavi International Autodrome",
-    image: "/federacia.png",
-    category: "Championship",
-    description: "Experience intense competition as riders battle for the championship title. Features professional and amateur divisions with cash prizes."
-  },
-  {
-    title: "2024 Circuit Race - Stage III",
-    date: "September 29, 11:00 AM",
-    url:"https://motofederation.ge/ka/event/2024-circuit-race-stage-iii",
-    location: "Rustavi International Autodrome",
-    image: "/Circuit_racing.png",
-    category: "Workshop",
-    description: "An electrifying night event with illuminated tracks, music, and spectacular light shows. Perfect for thrill-seekers and families alike."
-  },
-  {
-    title: "2024 Circuit Race - Stage II",
-    date: "July 14, 11:00 AM",
-    url:"https://motofederation.ge/ka/event/2024-circuit-race-stage-ii",
-    location: "Rustavi International Autodrome",
-    image: "/Frame 330 (1).png",
-    category: "Competition",
-    description: "Test your endurance and skill on challenging forest terrain. This all-day event features multiple obstacles and technical sections."
-  },
-  {
-    title: "Georgian Cup TIME ATTACK Stage II",
-    date: "July 14, 11:00 AM",
-    url:"https://motofederation.ge/ka/event/georgian-cup-time-attack-stage-ii",
-    location: "Rustavi International Autodrome",
-    image: "/Frame 333.png",
-    category: "Championship",
-    description: "A two-day adventure through scenic desert landscapes. Camping and meals included with registration."
-  },
-  {
-    title: "GNMF",
-    date: "00",
-    url:"https://motofederation.ge/ka/event/2025-sport-championship-of-georgia-circuit-racing-stage",
-    location: "Rustavi International Autodrome",
-    image: "/Gnmf.png",
-    category: "Workshop",
-    description: "Learn essential riding techniques and safety practices. Ideal for newcomers to the sport with equipment provided."
-  },
-  {
-    title: "Georgian Cup TIME ATTACK Stage I",
-    date: "00",
-    url:"https://motofederation.ge/ka/event/georgian-cup-time-attack-stage-i",
-    location: "Rustavi International Autodrome",
-    image: "/TIME ATACK.png",
-    category: "Competition",
-    description: "Watch professional riders showcase their most impressive stunts and techniques. Meet and greet session after the show."
-  }
-];
+import useTranslations from '@/hooks/useTranslations';
+import EventsSection from "@/components/Event";
 
 // Helper function to slugify event titles for dynamic routing
 const slugify = (title: string) =>
   title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)+/g, "");
 
 export default function EventsPage() {
+  const t = useTranslations();
+  
+  const events = [
+    {
+      title: 'მოტო დრაგი "ტრანსპორტერის ლიგა" ეტაპი I',
+      date: "2 ივნისი 13:00 საათი",
+      url: "https://motofederation.ge/ka/event/2024-moto-drag-racing",
+      location: t.events.location,
+      image: "/federacia.png",
+      category: t.events.categories.championship,
+      description: t.events.eventData.motoDrag2.description
+    },
+    {
+      title: 'წრიული რბოლა „ტრანსპორტერის ლიგა“ ეტაპი I',
+      date: "23 ივნისი, 11:00 საათი",
+      url:"https://motofederation.ge/ka/event/2025-sport-championship-of-georgia-circuit-racing-stage-",
+      location: t.events.location,
+      image: "/Circuit_racing.png",
+      category: t.events.categories.workshop,
+      description: t.events.eventData.circuitRace3.description
+    },
+    {
+      title: 'საქართელოს თასი TIME ATACK ეტაპი II  „ტრანსპორტერის ლიგა“',
+      date: "14 ივლისი, 11:00 საათი",
+      url:"https://motofederation.ge/ka/event/georgian-cup-time-attack-stage-ii",
+      location: t.events.location,
+      image: "/Frame 330 (1).png",
+      category: t.events.categories.competition,
+      description: t.events.eventData.circuitRace2.description
+    },
+    {
+      title: 'წრიული რბოლა „ტრანსპორტერის ლიგა“ ეტაპი II',
+      date: "14 ივლისი, 11:00 საათი",
+      url:"https://motofederation.ge/ka/event/2024-circuit-race-stage-ii",
+      location: t.events.location,
+      image: "/Frame 333.png",
+      category: t.events.categories.championship,
+      description: t.events.eventData.timeAttack2.description
+    },
+    {
+      title: 'საქართელოს თასი TIME ATACK ეტაპი III  „ტრანსპორტერის ლიგა“',
+      date: "29 სექტემბერი, 11:00 საათი",
+      url:"https://motofederation.ge/ka/event/georgian-cup-time-attack-stage-iii",
+      location: t.events.location,
+      image: "/Gnmf.png",
+      category: t.events.categories.workshop,
+      description: t.events.eventData.gnmf.description
+    },
+    {
+      title: 'წრიული რბოლა „ტრანსპორტერის ლიგა“ ეტაპი III',
+      date: "29 სექტემბერი, 11:00 საათი",
+      url:"https://motofederation.ge/ka/event/2024-circuit-race-stage-iii",
+      location: t.events.location,
+      image: "/TIME ATACK.png",
+      category: t.events.categories.competition,
+      description: t.events.eventData.timeAttack1.description
+    }
+  ];
+
   return (
     <main className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gray-900 text-white py-16 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Upcoming Events</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">{t.eventsPage.hero.title}</h1>
           <p className="text-gray-300 text-lg mb-6 max-w-3xl mx-auto">
-            Get ready for the ride of your life! Here's a sneak peek into our upcoming motocross adventures and tournaments.
+            {t.eventsPage.hero.subtitle}
           </p>
         </div>
       </section>
 
+      {/* <EventsSection /> */}
       {/* Events Grid */}
       <section className="py-16 px-6 bg-gray-50 flex-grow">
         <div className="max-w-7xl mx-auto">
@@ -109,12 +114,12 @@ export default function EventsPage() {
                   <div className="flex justify-between items-center">
                     <Link href="/registration">
                       <button className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md transition">
-                        Register Now
+                        {t.eventsPage.buttons.registerNow}
                       </button>
                     </Link>
                     <Link href={event.url}>
                       <button className="text-green-600 hover:text-green-800 font-medium">
-                        Learn More
+                        {t.eventsPage.buttons.learnMore}
                       </button>
                     </Link>
                   </div>
