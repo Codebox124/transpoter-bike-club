@@ -4,7 +4,7 @@ export const events = [
     {
       id: 1,
       title: 'მოტო დრაგი "ტრანსპორტერის ლიგა" ეტაპი I',
-      date: "2 ივნისი 13:00 საათი",
+      date: "2 ივნისი, 13:00 საათი",
       url: "https://motofederation.ge/ka/event/2024-moto-drag-racing",
       location: t.events.location,
       image: "/federacia.png",
