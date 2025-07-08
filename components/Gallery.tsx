@@ -3,9 +3,9 @@ const Gallery = () => {
       <section className="bg-gray-900 py-24 px-6 md:px-16">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <span className="inline-block px-4 py-1 bg-green-500 bg-opacity-20 text-green-400 font-medium text-sm rounded-full mb-4">CAPTURED MOMENTS</span>
+            <span className="inline-block px-4 py-1 bg-red-500 bg-opacity-20 text-red-400 font-medium text-sm rounded-full mb-4">CAPTURED MOMENTS</span>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Experience the Thrill Through Our Lens</h2>
-            <div className="w-24 h-1 bg-green-500 mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-red-500 mx-auto mb-8"></div>
             <p className="text-gray-300 max-w-2xl mx-auto">
               A visual journey through our most exhilarating events, breathtaking jumps, and milestone victories.
             </p>
@@ -21,7 +21,7 @@ const Gallery = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
                 <div className="absolute bottom-0 p-6">
-                  <span className="bg-green-500 text-xs text-gray-900 px-3 py-1 rounded-md font-semibold uppercase">Competition</span>
+                  <span className="bg-red-500 text-xs text-gray-900 px-3 py-1 rounded-md font-semibold uppercase">Competition</span>
                   <h3 className="text-xl font-bold text-white mt-2">Championship Finals</h3>
                 </div>
               </div>
@@ -64,7 +64,7 @@ const Gallery = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
                 <div className="absolute bottom-0 p-6">
-                  <span className="bg-green-500 text-xs text-gray-900 px-3 py-1 rounded-md font-semibold uppercase">Featured</span>
+                  <span className="bg-red-500 text-xs text-gray-900 px-3 py-1 rounded-md font-semibold uppercase">Featured</span>
                   <h3 className="text-xl font-bold text-white mt-2">Champion's Track</h3>
                 </div>
               </div>

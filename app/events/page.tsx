@@ -1,72 +1,11 @@
 'use client'
 import Link from "next/link";
 import useTranslations from '@/hooks/useTranslations';
-import EventsSection from "@/components/Event";
-
-// Helper function to slugify event titles for dynamic routing
-const slugify = (title: string) =>
-  title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)+/g, "");
+import { events } from "@/constants/events";
 
 export default function EventsPage() {
   const t = useTranslations();
   
-  const events = [
-    {
-      title: 'მოტო დრაგი "ტრანსპორტერის ლიგა" ეტაპი I',
-      date: "2 ივნისი 13:00 საათი",
-      url: "https://motofederation.ge/ka/event/2024-moto-drag-racing",
-      location: t.events.location,
-      image: "/federacia.png",
-      category: t.events.categories.championship,
-      description: t.events.eventData.motoDrag2.description
-    },
-    {
-      title: 'წრიული რბოლა „ტრანსპორტერის ლიგა“ ეტაპი I',
-      date: "23 ივნისი, 11:00 საათი",
-      url:"https://motofederation.ge/ka/event/2025-sport-championship-of-georgia-circuit-racing-stage-",
-      location: t.events.location,
-      image: "/Circuit_racing.png",
-      category: t.events.categories.workshop,
-      description: t.events.eventData.circuitRace3.description
-    },
-    {
-      title: 'საქართელოს თასი TIME ATACK ეტაპი II  „ტრანსპორტერის ლიგა“',
-      date: "14 ივლისი, 11:00 საათი",
-      url:"https://motofederation.ge/ka/event/georgian-cup-time-attack-stage-ii",
-      location: t.events.location,
-      image: "/Frame 330 (1).png",
-      category: t.events.categories.competition,
-      description: t.events.eventData.circuitRace2.description
-    },
-    {
-      title: 'წრიული რბოლა „ტრანსპორტერის ლიგა“ ეტაპი II',
-      date: "14 ივლისი, 11:00 საათი",
-      url:"https://motofederation.ge/ka/event/2024-circuit-race-stage-ii",
-      location: t.events.location,
-      image: "/Frame 333.png",
-      category: t.events.categories.championship,
-      description: t.events.eventData.timeAttack2.description
-    },
-    {
-      title: 'საქართელოს თასი TIME ATACK ეტაპი III  „ტრანსპორტერის ლიგა“',
-      date: "29 სექტემბერი, 11:00 საათი",
-      url:"https://motofederation.ge/ka/event/georgian-cup-time-attack-stage-iii",
-      location: t.events.location,
-      image: "/Gnmf.png",
-      category: t.events.categories.workshop,
-      description: t.events.eventData.gnmf.description
-    },
-    {
-      title: 'წრიული რბოლა „ტრანსპორტერის ლიგა“ ეტაპი III',
-      date: "29 სექტემბერი, 11:00 საათი",
-      url:"https://motofederation.ge/ka/event/2024-circuit-race-stage-iii",
-      location: t.events.location,
-      image: "/TIME ATACK.png",
-      category: t.events.categories.competition,
-      description: t.events.eventData.timeAttack1.description
-    }
-  ];
-
   return (
     <main className="flex flex-col min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -94,7 +33,7 @@ export default function EventsPage() {
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="text-xl font-bold text-gray-900">{event.title}</h3>
-                    <span className="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full capitalize">
+                    <span className="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full capitalize">
                       {event.category}
                     </span>
                   </div>
@@ -113,12 +52,12 @@ export default function EventsPage() {
                   <p className="text-gray-600 mb-4">{event.description}</p>
                   <div className="flex justify-between items-center">
                     <Link href="/registration">
-                      <button className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-md transition">
+                      <button className="bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-4 rounded-md transition">
                         {t.eventsPage.buttons.registerNow}
                       </button>
                     </Link>
                     <Link href={event.url}>
-                      <button className="text-green-600 hover:text-green-800 font-medium">
+                      <button className="text-red-600 hover:text-red-800 font-medium">
                         {t.eventsPage.buttons.learnMore}
                       </button>
                     </Link>

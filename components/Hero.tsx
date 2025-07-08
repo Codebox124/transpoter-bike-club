@@ -11,7 +11,7 @@ const Hero = () => {
           {/* <p className="max-w-xl mx-auto mb-6">
             Join us at ATV & Motorcycle and be part of a thriving community that celebrates motocross, adrenaline, and adventure!
           </p> */}
-          {/* <button className="px-8 py-3 bg-green-500 text-black font-semibold rounded-full hover:bg-green-600">
+          {/* <button className="px-8 py-3 bg-red-500 text-black font-semibold rounded-full hover:bg-red-600">
             Explore More
           </button> */}
         </div>

@@ -26,15 +26,15 @@ export function EventCard({
           alt={title}
           className="object-cover w-full h-full transform group-hover:scale-105 transition duration-500"
         />
-        <div className="absolute top-0 right-0 bg-green-500 text-gray-900 font-semibold text-xs px-3 py-1 m-4 rounded-md">
+        <div className="absolute top-0 right-0 bg-red-500 text-gray-900 font-semibold text-xs px-3 py-1 m-4 rounded-md">
           {category}
         </div>
       </div>
 
-      <div className="p-6 border-l-4 border-green-500">
+      <div className="p-6 border-l-4 border-red-500">
         <div className="flex items-center mb-4">
           <div className="bg-gray-900 rounded-md px-3 py-2 mr-4 text-center">
-            <span className="block text-green-500 text-xs font-medium">
+            <span className="block text-red-500 text-xs font-medium">
               {date.split(",")[0]}
             </span>
             <span className="block text-white text-xl font-bold">
@@ -47,7 +47,7 @@ export function EventCard({
         <div className="flex items-center text-gray-300 mb-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 mr-2 text-green-400"
+            className="h-5 w-5 mr-2 text-red-400"
             viewBox="0 0 20 20"
             fill="currentColor"
           >

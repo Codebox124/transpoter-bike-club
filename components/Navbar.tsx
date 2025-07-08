@@ -16,10 +16,10 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo and Brand Name */}
         <div className="flex items-center space-x-3">
-          <div className="h-16 w-16 bg-green-600 rounded-md flex items-center justify-center">
+          <div className="h-16 w-16 bg-red-600 rounded-md flex items-center justify-center">
            <img src="/logo.jpeg" alt="" />
           </div>
-          <h1 className="md:text-xl md:flex hidden text-sm font-bold text-green-600">TR <span className="text-black">ANSPORTERBIKERS</span> <span className="text-gray-600">CLUB</span></h1>
+          <h1 className="md:text-xl md:flex hidden text-sm font-bold text-red-600">TR <span className="text-black">ANSPORTERBIKERS</span> <span className="text-gray-600">CLUB</span></h1>
         </div>
 
         {/* Desktop Navigation Links */}
@@ -36,7 +36,7 @@ const Navbar = () => {
         <div className="md:hidden flex items-center">
           <button 
             onClick={toggleMenu}
-            className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
           >
             {isMenuOpen ? (
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -56,7 +56,7 @@ const Navbar = () => {
         <div className="md:hidden mt-4 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-4 absolute left-4 right-4">
           <div className="flex flex-col space-y-4">
             <Link href="/" className="text-gray-600 hover:text-gray-900 transition duration-300 px-3 py-2 rounded-md hover:bg-gray-100">{t.nav.home}</Link>
-            <Link href="/events" className="text-green-600 font-medium border-l-4 border-green-600 bg-green-50 px-3 py-2 rounded-md">{t.nav.events}</Link>
+            <Link href="/events" className="text-red-600 font-medium border-l-4 border-red-600 bg-red-50 px-3 py-2 rounded-md">{t.nav.events}</Link>
             <Link href="/partners" className="text-gray-600 hover:text-gray-900 transition duration-300 px-3 py-2 rounded-md hover:bg-gray-100">{t.nav.partners}</Link>
             <Link href="/registration" className="text-gray-600 hover:text-gray-900 transition duration-300 px-3 py-2 rounded-md hover:bg-gray-100">{t.nav.registration}</Link>
            

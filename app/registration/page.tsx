@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
-import Link from "next/link";
 import useTranslations from '@/hooks/useTranslations';
+import { events } from "@/constants/events";
 
 export default function RegistrationPage() {
   const t = useTranslations();
@@ -61,7 +61,7 @@ export default function RegistrationPage() {
                     onChange={handleChange}
                     required
                     placeholder={t.registrationPage.form.fullName.placeholder}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
                   />
                 </div>
 
@@ -76,7 +76,7 @@ export default function RegistrationPage() {
                       onChange={handleChange}
                       required
                       placeholder={t.registrationPage.form.email.placeholder}
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
                     />
                   </div>
                   <div>
@@ -89,7 +89,7 @@ export default function RegistrationPage() {
                       onChange={handleChange}
                       required
                       placeholder={t.registrationPage.form.phone.placeholder}
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                      className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
                     />
                   </div>
                 </div>
@@ -102,15 +102,14 @@ export default function RegistrationPage() {
                     value={formData.eventType}
                     onChange={handleChange}
                     required
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
                   >
                     <option value="">{t.registrationPage.form.eventType.placeholder}</option>
-                    <option value="motorcross">{t.registrationPage.form.eventType.options.motorcross}</option>
-                    <option value="nightride">{t.registrationPage.form.eventType.options.nightride}</option>
-                    <option value="enduro">{t.registrationPage.form.eventType.options.enduro}</option>
-                    <option value="workshop">{t.registrationPage.form.eventType.options.workshop}</option>
-                    <option value="rally">{t.registrationPage.form.eventType.options.rally}</option>
-                    <option value="exhibition">{t.registrationPage.form.eventType.options.exhibition}</option>
+                    {events.map((event) => (
+                      <option key={event.id} value={event.id}>
+                        {event.title}
+                      </option>
+                    ))}
                   </select>
                 </div>
 
@@ -122,7 +121,7 @@ export default function RegistrationPage() {
                     value={formData.experienceLevel}
                     onChange={handleChange}
                     required
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
                   >
                     <option value="">{t.registrationPage.form.experienceLevel.placeholder}</option>
                     <option value="beginner">{t.registrationPage.form.experienceLevel.options.beginner}</option>
@@ -140,7 +139,7 @@ export default function RegistrationPage() {
                     value={formData.bikeType}
                     onChange={handleChange}
                     placeholder={t.registrationPage.form.bikeType.placeholder}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
                   />
                 </div>
 
@@ -156,14 +155,14 @@ export default function RegistrationPage() {
                     onChange={handleChange}
 
                     placeholder={t.registrationPage.form.specialRequests.placeholder}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
                   ></textarea>
                 </div>
 
                 <div className="pt-4">
                   <button
                     type="submit"
-                    className="w-full px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                    className="w-full px-6 py-3 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 transition focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
                   >
                     {t.registrationPage.form.submitButton}
                   </button>

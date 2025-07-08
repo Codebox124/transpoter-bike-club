@@ -180,7 +180,7 @@ export const translations = {
       },
       bikeType: {
         label: "ბაიკის ტიპი",
-        placeholder: "მაგ., Yamaha Raptor 700"
+        placeholder: "მაგ., Kawasaki ZX-6R"
       },
       specialRequests: {
         label: "სპეციალური მოთხოვნები ან კითხვები",
